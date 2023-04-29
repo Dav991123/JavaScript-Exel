@@ -4,6 +4,8 @@ const ulList = document.querySelector('#book-list > ul');
 const hideBox = document.getElementById('hide')
 const searchInput = document.getElementById('searchBar');
 
+
+// add book functional
 const handleAddBook = () => {
     const { value } = addFormInput;
     if (value.trim()) {
@@ -25,4 +27,19 @@ const handleAddBook = () => {
    
 }
 
-addButton.addEventListener('click', handleAddBook)
+addButton.addEventListener('click', handleAddBook);
+// -----------------------------------------------
+
+
+
+// delete function
+const handleDeteleBook = event => {
+    const { target } = event;
+    if (target.className === 'delete') {
+        const li = target.parentElement;
+        ulList.removeChild(li);
+    }
+}
+
+ulList.addEventListener('click', handleDeteleBook);
+// -----------------------------------------------
