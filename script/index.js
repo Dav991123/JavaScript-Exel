@@ -43,3 +43,14 @@ const handleDeteleBook = event => {
 
 ulList.addEventListener('click', handleDeteleBook);
 // -----------------------------------------------
+
+
+
+// hide books functional
+const handleHideBooks = event => {
+    const { target } = event;
+    ulList.style.display = target.checked ? 'none' : 'block';
+}
+
+hideBox.addEventListener('input', handleHideBooks);
+// -----------------------------------------------
