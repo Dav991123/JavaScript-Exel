@@ -58,7 +58,8 @@ hideBox.addEventListener('input', handleHideBooks);
 
 const handleSearch = () => {
     const { value } = searchInput;
-    
+    console.log(value);
+    console.log('thanks Davit')
 };
 
 searchInput.addEventListener('keyup', handleSearch)
