@@ -6,7 +6,7 @@ const searchInput = document.getElementById('searchBar');
 
 
 // add book functional
-const handleAddBook = () => {
+const handleAddBook = () =>{
     const { value } = addFormInput;
     if (value.trim()) {
         const li = document.createElement('li');
@@ -54,3 +54,11 @@ const handleHideBooks = event => {
 
 hideBox.addEventListener('input', handleHideBooks);
 // -----------------------------------------------
+
+
+const handleSearch = () => {
+    const { value } = searchInput;
+    
+};
+
+searchInput.addEventListener('keyup', handleSearch)
